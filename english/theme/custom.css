@@ -1,0 +1,21 @@
+/* 手機閱讀：字體放大、行距拉開、圖片滿版 */
+@media (max-width: 768px) {
+  body { font-size: 1.95rem; line-height: 1.75; }
+  .content main { padding: 0 12px; }
+  .content h1 { font-size: 2.6rem; }
+  .content h2 { font-size: 2.2rem; }
+  .content h3 { font-size: 1.9rem; }
+  .content pre { font-size: 1.35rem; line-height: 1.45; }
+  .content table { font-size: 1.6rem; }
+}
+@media (max-width: 480px) {
+  body { font-size: 2.05rem; }
+}
+.content img { max-width: 100%; height: auto; display: block; margin: 1.2em auto; border: 1px solid #e3e3e3; border-radius: 8px; background: #fff; }
+.content details { margin: 0.8em 0; padding: 0.4em 0.9em; border-left: 3px solid #9ca3af; background: rgba(128,128,128,0.06); border-radius: 4px; }
+.content summary { cursor: pointer; font-weight: 600; }
+
+/* 寬表格與程式碼區塊在手機上可以左右捲動，不要撐開整頁 */
+.content table { display: block; overflow-x: auto; max-width: 100%; -webkit-overflow-scrolling: touch; }
+.content pre { overflow-x: auto; }
+.content main { overflow-x: hidden; }
