@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vic 的書架</title>
+<meta name="description" content="給國小高年級、國中生，以及零經驗大人的自學實作教材。">
+<style>
+  :root{--bg:#fafaf7;--fg:#1f2328;--muted:#6b7280;--card:#fff;--line:#e5e7eb;--accent:#2563eb}
+  @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1115;--fg:#e6e6e6;--muted:#9aa0a6;--card:#171a21;--line:#2a2f3a;--accent:#7aa2ff}}
+  :root[data-theme="dark"]{--bg:#0f1115;--fg:#e6e6e6;--muted:#9aa0a6;--card:#171a21;--line:#2a2f3a;--accent:#7aa2ff}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.7 -apple-system,"PingFang TC","Noto Sans TC",system-ui,sans-serif}
+  main{max-width:760px;margin:0 auto;padding:48px 16px}
+  h1{font-size:28px;margin:0 0 4px}
+  p.sub{color:var(--muted);margin:0 0 32px}
+  .book{display:block;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px 22px;margin-bottom:16px;text-decoration:none;color:inherit}
+  .book:hover{border-color:var(--accent)}
+  .book h2{font-size:20px;margin:0 0 6px}
+  .book p{margin:0;color:var(--muted)}
+  .tag{display:inline-block;font-size:12px;color:var(--accent);border:1px solid var(--accent);border-radius:999px;padding:0 8px;margin-left:8px;vertical-align:middle}
+  footer{color:var(--muted);font-size:13px;margin-top:40px}
+</style>
+</head>
+<body>
+<main>
+  <h1>Vic 的書架</h1>
+  <p class="sub">給國小高年級、國中生，以及零經驗大人的自學實作教材。</p>
+
+  <a class="book" href="electric/">
+    <h2>動手玩電 <span class="tag">電學 · 電子學 · Arduino · ESP32</span></h2>
+    <p>從一顆 LED 開始，用示波器和邏輯分析儀把看不見的電畫出來。17 章、5 個專題、6 個附錄。</p>
+  </a>
+
+  <!-- 新書範本：複製上面的 <a class="book"> 區塊，href 改成書的資料夾名稱 -->
+
+  <footer>book.vichuang.tw</footer>
+</main>
+</body>
+</html>

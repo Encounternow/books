@@ -1,0 +1,18 @@
+[book]
+title = "動手玩電：給國中生的電學、電子學與電路學實作課"
+authors = ["electric-course"]
+language = "zh-TW"
+src = "src"
+
+[build]
+build-dir = "book"
+
+[output.html]
+default-theme = "light"
+preferred-dark-theme = "navy"
+no-section-label = true
+site-url = "/electric/"
+
+[output.html.fold]
+enable = true
+level = 1
