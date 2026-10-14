@@ -1,0 +1,19 @@
+[book]
+title = "廚房裡的化學：安全又好玩的國中化學實驗課"
+authors = ["Vic Huang"]
+language = "zh-TW"
+src = "src"
+
+[build]
+build-dir = "book"
+
+[output.html]
+additional-css = ["theme/custom.css"]
+default-theme = "light"
+preferred-dark-theme = "navy"
+no-section-label = true
+site-url = "/chemistry/"
+
+[output.html.fold]
+enable = true
+level = 1

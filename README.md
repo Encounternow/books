@@ -5,6 +5,11 @@
 | 資料夾 | 書名 | 網址 |
 |---|---|---|
 | `electric/` | 動手玩電：給國中生的電學、電子學與電路學實作課 | https://book.vichuang.tw/electric/ |
+| `physics/` | 動手玩物理：家裡就能做的國中物理實驗課 | https://book.vichuang.tw/physics/ |
+| `chemistry/` | 廚房裡的化學：安全又好玩的國中化學實驗課 | https://book.vichuang.tw/chemistry/ |
+| `statistics/` | 從資料看世界：零基礎統計學 | https://book.vichuang.tw/statistics/ |
+| `economics/` | 生活經濟學：從零用錢看懂世界怎麼運作 | https://book.vichuang.tw/economics/ |
+| `accounting/` | 看懂錢的流向：零基礎會計入門 | https://book.vichuang.tw/accounting/ |
 
 ## 本機預覽
 
@@ -19,7 +24,7 @@ brew install mdbook          # 只要裝一次
 
 - 章節原始檔在 `electric/src/`，一章一個 Markdown 檔，目錄順序由 `electric/src/SUMMARY.md` 決定。
 - 圖片放 `electric/src/images/`，用法見該資料夾的 README。
-- 寫作規範與全書大綱在 `electric/STYLE_GUIDE.md`、`electric/OUTLINE.md`，擴寫新章節時請遵守。
+- 共用寫作規範在根目錄 `STYLE_GUIDE.md`，每本書的大綱在各自的 `OUTLINE.md`（電學書另有自己的 `electric/STYLE_GUIDE.md` 與接線圖工具 `tools/bbdraw.py`、`tools/DIAGRAM_GUIDE.md`）。
 - 改完 `git commit` 並 `git push`，約 1–2 分鐘後網站更新。
 
 ## 加一本新書
