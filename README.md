@@ -9,6 +9,7 @@
 | `chemistry/` | 廚房裡的化學：安全又好玩的國中化學實驗課 | https://book.vichuang.tw/chemistry/ |
 | `ai-use/` | AI 怎麼用：國中生與家長的 AI 應用課 | https://book.vichuang.tw/ai-use/ |
 | `ai-theory/` | AI 怎麼運作：從機器學習到語言模型的直覺課 | https://book.vichuang.tw/ai-theory/ |
+| `ai-build/` | AI 工程實作：從 Skill、MCP 到 RAG、LoRA 與自架模型 | https://book.vichuang.tw/ai-build/ |
 | `mech/` | 動手玩機械與 3D 列印：從齒輪到自己設計零件 | https://book.vichuang.tw/mech/ |
 | `statistics/` | 從資料看世界：零基礎統計學 | https://book.vichuang.tw/statistics/ |
 | `economics/` | 生活經濟學：從零用錢看懂世界怎麼運作 | https://book.vichuang.tw/economics/ |
