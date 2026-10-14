@@ -1,0 +1,20 @@
+{
+  "title": "實驗 16-4：DHT11 溫濕度顯示在網頁與 OLED（ESP32）",
+  "boards": ["esp32"],
+  "parts": [
+    {"type": "dht11", "pins": ["f8", "f9", "f10"]},
+    {"type": "oled", "pins": ["f18", "f19", "f20", "f21"]}
+  ],
+  "wires": [
+    ["esp:3V3", "B+2", "red"],
+    ["esp:GND", "B-2", "black"],
+    ["j8", "B+8", "red"],
+    ["esp:4", "i9", "green"],
+    ["j10", "B-10", "black"],
+    ["j18", "B-18", "black"],
+    ["j19", "B+19", "red"],
+    ["esp:22", "i20", "yellow"],
+    ["esp:21", "i21", "blue"]
+  ],
+  "notes": ["DHT11：VCC（+）→ 3V3、DATA → GPIO 4、GND → GND；三腳模組已內建上拉電阻", "OLED：VCC → 3V3、GND → GND、SDA → GPIO 21（藍）、SCL → GPIO 22（黃）", "兩個元件都用 3V3（下方紅軌），不要接 VIN 的 5V"]
+}

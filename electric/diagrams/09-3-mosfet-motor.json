@@ -1,0 +1,27 @@
+{
+  "title": "實驗 9-3：換成 MOSFET IRLZ44N 開關馬達",
+  "boards": ["uno"],
+  "parts": [
+    {"type": "resistor", "value": "220Ω", "pins": ["h10", "h14"]},
+    {"type": "mosfet", "label": "IRLZ44N", "pins": ["f14", "f15", "f16"]},
+    {"type": "resistor", "value": "10kΩ", "pins": ["i14", "B-14"]},
+    {"type": "diode", "label": "1N4007", "pins": ["i15", "i20"]},
+    {"type": "motor", "id": "motor"},
+    {"type": "scope", "id": "scope"}
+  ],
+  "wires": [
+    ["uno:5V", "T+3", "red"],
+    ["uno:GND", "T-3", "black"],
+    ["uno:GND2", "B-5", "black"],
+    ["uno:D9", "j10", "orange"],
+    ["j16", "B-16", "black"],
+    ["motor:1", "j15", "red"],
+    ["motor:2", "j20", "red"],
+    ["j20", "T+20", "red"]
+  ],
+  "probes": [
+    {"ch": "CH1", "tip": "j10", "gnd": "T-24"},
+    {"ch": "CH2", "tip": "g15", "gnd": "T-28"}
+  ],
+  "notes": ["D9 → 220Ω → G（f14）；G → 10kΩ → GND（下方藍軌）；S（f16）→ GND", "D（f15）→ 馬達一腳，馬達另一腳 → 5V；1N4007 白線端（陰極，i20）接 5V 側", "CH1 夾 D9 端（j10）、CH2 夾 D 腳（g15）；IRLZ44N 背面金屬片和 D 相通，別碰到別的線"]
+}

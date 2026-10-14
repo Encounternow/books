@@ -1,0 +1,14 @@
+{
+  "title": "實驗 1-2：第一個電路——9V 電池 + 1kΩ + 紅光 LED",
+  "boards": [],
+  "parts": [
+    {"type": "battery9v", "id": "bat"},
+    {"type": "resistor", "value": "1kΩ", "pins": ["c5", "c8"]},
+    {"type": "led", "color": "red", "pins": ["d8", "d9"]}
+  ],
+  "wires": [
+    ["bat:+", "a5", "red"],
+    ["bat:-", "a9", "black"]
+  ],
+  "notes": ["電池扣紅線插 a5，黑線插 a9；同一列 a–e 五個孔互相連通", "LED 長腳（+）插 d8，短腳插 d9"]
+}

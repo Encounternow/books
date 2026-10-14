@@ -1,0 +1,20 @@
+{
+  "title": "實驗 15-2：OLED 接 I2C（A4 SDA / A5 SCL），邏輯分析儀 CH0/CH1 偷聽",
+  "boards": ["uno"],
+  "parts": [
+    {"type": "oled", "pins": ["e10", "e11", "e12", "e13"]},
+    {"type": "logic", "id": "logic"}
+  ],
+  "wires": [
+    ["uno:5V", "T+1", "red"],
+    ["uno:GND", "T-1", "black"],
+    ["a10", "T-10", "black"],
+    ["a11", "T+11", "red"],
+    ["uno:A5", "c12", "yellow"],
+    ["uno:A4", "d13", "blue"],
+    ["a12", "logic:CH1", "yellow"],
+    ["a13", "logic:CH0", "blue"],
+    ["logic:GND", "T-3", "black"]
+  ],
+  "notes": ["OLED 四腳：GND（e10）、VCC（e11）→ 5V、SCL（e12）← A5、SDA（e13）← A4", "A4 拉到第 13 行，OLED SDA 和分析儀 CH0 都插同一行；A5 同理在第 12 行接 CH1", "邏輯分析儀 GND 接 GND 軌（與 Arduino 共地）"]
+}

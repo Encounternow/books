@@ -1,0 +1,24 @@
+{
+  "title": "實驗 17-2：專題二 溫濕度氣象站（ESP32 + 邏輯分析儀）",
+  "boards": ["esp32"],
+  "parts": [
+    {"type": "dht11", "pins": ["f8", "f9", "f10"]},
+    {"type": "oled", "pins": ["f18", "f19", "f20", "f21"]},
+    {"type": "logic", "id": "logic"}
+  ],
+  "wires": [
+    ["esp:3V3", "B+2", "red"],
+    ["esp:GND", "B-2", "black"],
+    ["j8", "B+8", "red"],
+    ["esp:4", "i9", "green"],
+    ["j10", "B-10", "black"],
+    ["j18", "B-18", "black"],
+    ["j19", "B+19", "red"],
+    ["esp:22", "i20", "yellow"],
+    ["esp:21", "i21", "blue"],
+    ["logic:CH0", "j21", "blue"],
+    ["logic:CH1", "j20", "yellow"],
+    ["logic:GND", "B-25", "black"]
+  ],
+  "notes": ["接線與實驗 16-4 相同：DHT11 DATA → GPIO 4；OLED SDA → GPIO 21、SCL → GPIO 22；兩者都用 3V3", "測試用邏輯分析儀：CH0 → SDA（GPIO 21）、CH1 → SCL（GPIO 22）、GND → ESP32 GND（下方藍軌）"]
+}

@@ -1,0 +1,52 @@
+{
+  "title": "實驗 2-3：驗證歐姆定律——固定 1kΩ，換三種電源量電流（圖示 2 顆 3 號電池）",
+  "boards": [],
+  "parts": [
+    {
+      "type": "aa4",
+      "id": "aa2",
+      "cells": 2
+    },
+    {
+      "type": "meter",
+      "id": "meter",
+      "mode": "A",
+      "display": "3.0 mA"
+    },
+    {
+      "type": "resistor",
+      "value": "1kΩ",
+      "pins": [
+        "c5",
+        "c3"
+      ]
+    }
+  ],
+  "wires": [
+    [
+      "a3",
+      "aa2:+",
+      "red"
+    ],
+    [
+      "aa2:-",
+      "a8",
+      "black"
+    ],
+    [
+      "meter:red",
+      "e5",
+      "red"
+    ],
+    [
+      "meter:black",
+      "e8",
+      "black"
+    ]
+  ],
+  "notes": [
+    "電源＋ → a3；1kΩ 一腳 c3、另一腳 c5；電表（mA 孔、DCA 20m）紅棒 e5、黑棒 e8；電源－ → a8",
+    "換 Arduino 5V/GND 或 9V 電池扣紅/黑線時，一樣接 a3 與 a8",
+    "量電壓時：拿掉電表，用杜邦線把 e5–e8 接起來，電表改 DCV 20V，紅棒 b3、黑棒 b8"
+  ]
+}

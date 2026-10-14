@@ -1,0 +1,102 @@
+{
+  "title": "實驗 17-3：專題三 手機 Wi-Fi 遙控風扇（ESP32 + IRLZ44N）",
+  "boards": [
+    "esp32"
+  ],
+  "parts": [
+    {
+      "type": "mosfet",
+      "label": "IRLZ44N",
+      "pins": [
+        "f14",
+        "f15",
+        "f16"
+      ]
+    },
+    {
+      "type": "resistor",
+      "value": "220Ω",
+      "pins": [
+        "i10",
+        "i14"
+      ]
+    },
+    {
+      "type": "resistor",
+      "value": "10kΩ",
+      "pins": [
+        "j14",
+        "j18"
+      ]
+    },
+    {
+      "type": "diode",
+      "label": "1N4007",
+      "pins": [
+        "h15",
+        "h20"
+      ]
+    },
+    {
+      "type": "motor",
+      "id": "motor"
+    },
+    {
+      "type": "aa4",
+      "id": "bat",
+      "cells": 3
+    }
+  ],
+  "wires": [
+    [
+      "esp:18",
+      "j10",
+      "orange"
+    ],
+    [
+      "esp:GND",
+      "B-2",
+      "black"
+    ],
+    [
+      "i18",
+      "B-18",
+      "black"
+    ],
+    [
+      "j16",
+      "B-16",
+      "black"
+    ],
+    [
+      "bat:+",
+      "B+5",
+      "red"
+    ],
+    [
+      "bat:-",
+      "B-5",
+      "black"
+    ],
+    [
+      "motor:1",
+      "B+9",
+      "red"
+    ],
+    [
+      "motor:2",
+      "i15",
+      "red"
+    ],
+    [
+      "j20",
+      "B+20",
+      "red"
+    ]
+  ],
+  "notes": [
+    "GPIO 18 → 220Ω → G（f14）；G → 10kΩ → GND（下拉）；S（f16）→ GND；ESP32 GND、電池盒 − 都接下方藍軌（共地）",
+    "電池盒 + → 馬達一腳；馬達另一腳 → D（f15）；1N4007 跨在馬達兩端，色環（陰極）那端 h20 接電池 +，另一端 h15 接 D",
+    "馬達不要用 ESP32 的 3V3 供電；測試時示波器 CH1 鉤 G、CH2 鉤 D，鱷魚夾夾 GND 軌"
+  ]
+}

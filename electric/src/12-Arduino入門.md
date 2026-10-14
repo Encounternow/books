@@ -132,6 +132,8 @@ if (digitalRead(2) == LOW) {   // 如果按鈕被按下（上拉：按下是 LOW
                         LED
 ```
 
+![麵包板接線圖：實驗 12-1 Blink，第一支程式](images/12-1-blink.svg)
+
 - Arduino D9 → 220 Ω 電阻 → LED 長腳（+）。
 - LED 短腳（−）→ Arduino GND。
 
@@ -192,6 +194,8 @@ void loop() {
  Arduino D2 ──── 按鈕 ──── GND    （程式打開內建上拉）
 ```
 
+![麵包板接線圖：實驗 12-2 按鈕控制 LED](images/12-2-button-led.svg)
+
 - LED 同實驗 12-1。
 - 按鈕一腳 → Arduino D2，另一腳 → GND。不用外接電阻，程式用 `INPUT_PULLUP`。
 
@@ -242,6 +246,8 @@ void loop() {
 
 **接線**
 - 與實驗 12-2 相同。
+
+![麵包板接線圖：實驗 12-3 把按鈕狀態印到電腦上](images/12-3-serial-button.svg)
 
 **程式**
 

@@ -1,0 +1,79 @@
+{
+  "title": "實驗 3-2：並聯 LED（正確接法：每顆 LED 各自一顆 330Ω）",
+  "boards": [
+    "uno"
+  ],
+  "parts": [
+    {
+      "type": "resistor",
+      "value": "330Ω",
+      "pins": [
+        "c5",
+        "c3"
+      ]
+    },
+    {
+      "type": "led",
+      "color": "red",
+      "label": "紅 LED",
+      "pins": [
+        "d5",
+        "d6"
+      ]
+    },
+    {
+      "type": "resistor",
+      "value": "330Ω",
+      "pins": [
+        "c11",
+        "c9"
+      ]
+    },
+    {
+      "type": "led",
+      "color": "green",
+      "label": "綠 LED",
+      "pins": [
+        "d11",
+        "d12"
+      ]
+    }
+  ],
+  "wires": [
+    [
+      "uno:5V",
+      "T+15",
+      "red"
+    ],
+    [
+      "uno:GND",
+      "T-20",
+      "black"
+    ],
+    [
+      "T+3",
+      "a3",
+      "red"
+    ],
+    [
+      "T-6",
+      "a6",
+      "black"
+    ],
+    [
+      "T+9",
+      "a9",
+      "red"
+    ],
+    [
+      "T-12",
+      "a12",
+      "black"
+    ]
+  ],
+  "notes": [
+    "Arduino 5V → ＋軌（紅）、Arduino GND → －軌（藍）",
+    "支路 A：＋軌 → a3；330Ω c3–c5；紅 LED 長腳 d5、短腳 d6；a6 → －軌",
+    "支路 B：＋軌 → a9；330Ω c9–c11；綠 LED 長腳 d11、短腳 d12；a12 → －軌"
+  ]
+}

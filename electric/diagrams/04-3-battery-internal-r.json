@@ -1,0 +1,19 @@
+{
+  "title": "實驗 4-3：量電池的內阻（兩顆 100Ω 串聯當負載）",
+  "boards": [],
+  "parts": [
+    {"type": "battery9v", "id": "bat"},
+    {"type": "meter", "id": "meter", "mode": "V", "display": "9.15"},
+    {"type": "resistor", "value": "100Ω", "pins": ["h4", "h8"]},
+    {"type": "resistor", "value": "100Ω", "pins": ["i8", "i12"]}
+  ],
+  "wires": [
+    ["bat:+", "B+2", "red"],
+    ["bat:-", "B-4", "black"],
+    ["B+5", "j4", "red"],
+    ["B-14", "j12", "black"],
+    ["meter:red", "B+8", "red"],
+    ["meter:black", "B-6", "black"]
+  ],
+  "notes": ["電池扣紅線接 + 軌、黑線接 − 軌；電表（DCV 20V）紅棒夾 + 軌、黑棒夾 − 軌，量的就是電池端電壓", "先拔掉兩顆 100Ω 量空載 V空載；插回後 5 秒內讀 V負載，再把電阻拔掉"]
+}

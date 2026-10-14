@@ -1,0 +1,57 @@
+{
+  "title": "實驗 3-1（A）：分壓器——R1、R2 各 10kΩ，量 V_out",
+  "boards": [
+    "uno"
+  ],
+  "parts": [
+    {
+      "type": "resistor",
+      "value": "10kΩ",
+      "pins": [
+        "c5",
+        "c3"
+      ]
+    },
+    {
+      "type": "resistor",
+      "value": "10kΩ",
+      "pins": [
+        "d7",
+        "d5"
+      ]
+    },
+    {
+      "type": "meter",
+      "id": "meter",
+      "mode": "V",
+      "display": "2.50"
+    }
+  ],
+  "wires": [
+    [
+      "uno:5V",
+      "a3",
+      "red"
+    ],
+    [
+      "uno:GND",
+      "a7",
+      "black"
+    ],
+    [
+      "meter:red",
+      "e5",
+      "red"
+    ],
+    [
+      "meter:black",
+      "e7",
+      "black"
+    ]
+  ],
+  "notes": [
+    "Arduino 5V → a3；R1（10kΩ）c3–c5；R2（10kΩ）d5–d7；Arduino GND → a7；第 5 列就是 V_out",
+    "電表 DCV 20V：紅棒 e5（V_out）、黑棒 e7（GND）；量 V_in 時紅棒改 e3",
+    "之後把 R2 換成 4.7kΩ、1kΩ 再量 V_out"
+  ]
+}

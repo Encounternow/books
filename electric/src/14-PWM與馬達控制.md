@@ -152,6 +152,8 @@ ledcWrite(0, 128);          // 注意：這裡填的是通道，不是腳位
                         LED
 ```
 
+![麵包板接線圖：實驗 14-1 呼吸燈，然後量它的占空比](images/14-1-pwm-breathe.svg)
+
 - Arduino D9 → 220Ω → LED 長腳，LED 短腳 → GND
 
 **步驟**
@@ -223,6 +225,8 @@ void loop() {
  SG90 紅線（5V）  ──── Arduino 5V
  SG90 棕線（GND） ──── Arduino GND
 ```
+
+![麵包板接線圖：實驗 14-2 讓 SG90 伺服馬達轉到指定角度](images/14-2-servo.svg)
 
 - SG90 橘線 → Arduino D9
 - SG90 紅線 → Arduino 5V
@@ -305,6 +309,8 @@ void loop() {
 
  可變電阻：左腳 → 5V，右腳 → GND，中間腳 → A0
 ```
+
+![麵包板接線圖：實驗 14-3 用 MOSFET 和 PWM 幫直流馬達調速](images/14-3-mosfet-motor.svg)
 
 - Arduino D9 → 220Ω → IRLZ44N 的 G（閘極）
 - IRLZ44N 的 G → 10kΩ → Arduino GND（下拉）

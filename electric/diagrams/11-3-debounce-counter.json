@@ -1,0 +1,21 @@
+{
+  "title": "實驗 11-3：按鈕計數器（按鈕 A 接 D2，LED 接 D9）",
+  "boards": ["uno"],
+  "parts": [
+    {"type": "resistor", "value": "220Ω", "pins": ["c12", "c15"]},
+    {"type": "led", "color": "red", "pins": ["d15", "d18"]},
+    {"type": "button", "pins": ["e21", "f21"]}
+  ],
+  "wires": [
+    ["uno:D9", "a12", "orange"],
+    ["uno:GND", "T-3", "black"],
+    ["a18", "T-18", "black"],
+    ["uno:D2", "a21", "yellow"],
+    ["uno:GND2", "B-10", "black"],
+    ["j21", "B-21", "black"]
+  ],
+  "notes": [
+    "D9 → 220Ω（c12→c15）→ LED 長腳（d15）；LED 短腳（d18）由 a18 接 GND 軌",
+    "按鈕 A 上腳接 D2，下腳接下方 GND 軌（內建上拉，按下是 LOW）"
+  ]
+}

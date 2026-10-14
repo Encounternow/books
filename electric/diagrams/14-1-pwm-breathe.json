@@ -1,0 +1,17 @@
+{
+  "title": "實驗 14-1：D9 PWM 呼吸燈，三用電表量平均電壓",
+  "boards": ["uno"],
+  "parts": [
+    {"type": "resistor", "value": "220Ω", "pins": ["c5", "c9"]},
+    {"type": "led", "color": "red", "pins": ["d9", "d11"]},
+    {"type": "meter", "id": "meter", "mode": "V", "display": "1.25"}
+  ],
+  "wires": [
+    ["uno:GND", "T-1", "black"],
+    ["a5", "uno:D9", "orange"],
+    ["a11", "T-11", "black"],
+    ["b5", "meter:red", "red"],
+    ["T-3", "meter:black", "black"]
+  ],
+  "notes": ["D9 → 220Ω（c5–c9）→ LED 長腳（d9），LED 短腳（d11）→ GND", "電表直流電壓檔 20V：紅棒碰 D9 那一行（b5）、黑棒碰 GND；analogWrite(64) 約 1.25V"]
+}

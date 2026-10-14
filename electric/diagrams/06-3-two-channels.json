@@ -1,0 +1,17 @@
+{
+  "title": "實驗 6-3：兩個通道一起看（D9 tone 1kHz、D10 digitalWrite 約 500Hz）",
+  "boards": ["uno"],
+  "parts": [
+    {"type": "scope", "id": "scope"}
+  ],
+  "wires": [
+    ["uno:D10", "a8", "yellow"],
+    ["uno:D9", "a16", "orange"],
+    ["uno:GND", "T-3", "black"]
+  ],
+  "probes": [
+    {"ch": "CH1", "tip": "e16", "gnd": "T-24"},
+    {"ch": "CH2", "tip": "e8", "gnd": "T-29"}
+  ],
+  "notes": ["CH1 探棒鉤 D9 那條線（e16），CH2 探棒鉤 D10 那條線（e8）", "兩支探棒的接地夾都夾在 GND 那條線（− 軌）上，絕對不要夾 D9 或 D10"]
+}

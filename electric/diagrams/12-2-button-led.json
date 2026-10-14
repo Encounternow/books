@@ -1,0 +1,21 @@
+{
+  "title": "實驗 12-2：按鈕控制 LED",
+  "boards": ["uno"],
+  "parts": [
+    {"type": "resistor", "value": "220Ω", "pins": ["c12", "c15"]},
+    {"type": "led", "color": "red", "pins": ["d15", "d18"]},
+    {"type": "button", "pins": ["e21", "f21"]}
+  ],
+  "wires": [
+    ["uno:D9", "a12", "orange"],
+    ["uno:GND", "T-3", "black"],
+    ["a18", "T-18", "black"],
+    ["uno:D2", "a21", "yellow"],
+    ["uno:GND2", "B-10", "black"],
+    ["j21", "B-21", "black"]
+  ],
+  "notes": [
+    "LED 同實驗 12-1：D9 → 220Ω → LED 長腳（d15），短腳（d18）接 GND 軌",
+    "按鈕上腳（e21 那一行）接 D2，下腳（f21 那一行）接下方 GND 軌；程式用 INPUT_PULLUP，不用外接電阻"
+  ]
+}

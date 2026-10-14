@@ -1,0 +1,20 @@
+{
+  "title": "實驗 5-2：用三用電表看電容電壓慢慢掉（充電：10kΩ 移到按鈕和電容之間）",
+  "boards": [],
+  "parts": [
+    {"type": "battery9v", "id": "bat"},
+    {"type": "meter", "id": "meter", "mode": "V", "display": "5.70"},
+    {"type": "button", "pins": ["e8", "f8"]},
+    {"type": "resistor", "value": "10kΩ", "pins": ["i8", "i12"]},
+    {"type": "capacitor", "value": "100µF", "polar": true, "pins": ["g12", "g15"]}
+  ],
+  "wires": [
+    ["bat:+", "T+3", "red"],
+    ["T+8", "a8", "red"],
+    ["bat:-", "B-3", "black"],
+    ["j15", "B-15", "black"],
+    ["meter:red", "j12", "red"],
+    ["meter:black", "B-5", "black"]
+  ],
+  "notes": ["9V + → 按鈕 → 10kΩ → 電容長腳（+，g12）；電容短腳（g15）→ GND 軌", "電表紅棒夾電容 +（j12）、黑棒夾 GND 軌；先用杜邦線碰一下電容兩腳放光，再按住按鈕每秒讀一次"]
+}

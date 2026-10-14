@@ -1,0 +1,51 @@
+{
+  "title": "第 16 章 用儀器看看：示波器同時看 UNO 5V 與 ESP32 3.3V 方波",
+  "boards": [
+    "uno",
+    "esp32"
+  ],
+  "parts": [
+    {
+      "type": "scope",
+      "id": "scope"
+    }
+  ],
+  "wires": [
+    [
+      "uno:D9",
+      "a6",
+      "orange"
+    ],
+    [
+      "uno:GND",
+      "T-4",
+      "black"
+    ],
+    [
+      "esp:2",
+      "a12",
+      "blue"
+    ],
+    [
+      "esp:GND",
+      "T-1",
+      "black"
+    ]
+  ],
+  "probes": [
+    {
+      "ch": "CH1",
+      "tip": "e6",
+      "gnd": "T-9"
+    },
+    {
+      "ch": "CH2",
+      "tip": "e12",
+      "gnd": "T-16"
+    }
+  ],
+  "notes": [
+    "UNO D9 拉到第 6 行，CH1 探棒鉤 e6；ESP32 GPIO 2 拉到第 12 行，CH2 探棒鉤 e12",
+    "兩塊板子的 GND 都接到同一條藍色 GND 軌（共地），兩支探棒的鱷魚夾也夾這條軌"
+  ]
+}

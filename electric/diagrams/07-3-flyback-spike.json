@@ -1,0 +1,25 @@
+{
+  "title": "實驗 7-3：Arduino 經 2N2222 開關馬達，示波器看反電動勢尖波（含飛輪二極體）",
+  "boards": ["uno"],
+  "parts": [
+    {"type": "resistor", "value": "1kΩ", "pins": ["i11", "i15"]},
+    {"type": "transistor", "label": "2N2222", "pins": ["f14", "f15", "f16"]},
+    {"type": "diode", "label": "1N4007", "pins": ["i16", "i21"]},
+    {"type": "motor", "id": "motor"},
+    {"type": "scope", "id": "scope"}
+  ],
+  "wires": [
+    ["uno:5V", "T+3", "red"],
+    ["uno:GND", "T-3", "black"],
+    ["uno:GND2", "B-5", "black"],
+    ["uno:D9", "j11", "orange"],
+    ["j14", "B-14", "black"],
+    ["motor:1", "j16", "red"],
+    ["motor:2", "j21", "red"],
+    ["j21", "T+21", "red"]
+  ],
+  "probes": [
+    {"ch": "CH1", "tip": "g16", "gnd": "T-25"}
+  ],
+  "notes": ["D9 → 1kΩ → B（f15）；E（f14）→ GND；C（f16）→ 馬達一腳，馬達另一腳 → 5V", "第一階段先不接 1N4007；第二階段再加：白線端（陰極，i21）接 5V 側，另一端（i16）接 C", "CH1 探棒夾 C 腳（g16），接地夾夾 GND 軌；探棒切 10×"]
+}

@@ -1,0 +1,17 @@
+{
+  "title": "實驗 13-3：DHT11 讀溫度與濕度——DATA 接 D2",
+  "boards": ["uno"],
+  "parts": [
+    {"type": "dht11", "pins": ["e10", "e11", "e12"]},
+    {"type": "resistor", "value": "10kΩ", "pins": ["b7", "b11"]}
+  ],
+  "wires": [
+    ["uno:5V", "T+1", "red"],
+    ["uno:GND", "T-1", "black"],
+    ["a10", "T+10", "red"],
+    ["a12", "T-12", "black"],
+    ["c11", "uno:D2", "green"],
+    ["a7", "T+7", "red"]
+  ],
+  "notes": ["DHT11 三腳：＋（e10）→ 5V、out（e11）→ D2、−（e12）→ GND；腳位順序以模組印刷字為準", "10kΩ 上拉（b7–b11，接在 DATA 與 5V 之間）只有 4 腳裸件版才要加，3 腳模組版可省略"]
+}

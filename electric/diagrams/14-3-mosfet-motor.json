@@ -1,0 +1,26 @@
+{
+  "title": "實驗 14-3：IRLZ44N + PWM 幫直流馬達調速，可變電阻設定速度",
+  "boards": ["uno"],
+  "parts": [
+    {"type": "resistor", "value": "220Ω", "pins": ["c8", "c12"]},
+    {"type": "resistor", "value": "10kΩ", "pins": ["b12", "b16"]},
+    {"type": "mosfet", "label": "IRLZ44N", "pins": ["e12", "e13", "e14"]},
+    {"type": "diode", "label": "1N4007", "pins": ["d13", "d19"]},
+    {"type": "pot", "pins": ["e22", "e23", "e24"]},
+    {"type": "motor", "id": "motor"}
+  ],
+  "wires": [
+    ["uno:5V", "T+1", "red"],
+    ["uno:GND", "T-1", "black"],
+    ["a8", "uno:D9", "orange"],
+    ["a16", "T-16", "black"],
+    ["a14", "T-14", "black"],
+    ["a19", "T+19", "red"],
+    ["motor:1", "T+3", "red"],
+    ["c13", "motor:2", "red"],
+    ["a22", "T+22", "red"],
+    ["a24", "T-24", "black"],
+    ["uno:A0", "c23", "green"]
+  ],
+  "notes": ["D9 → 220Ω → G（e12）；G 再經 10kΩ（b12–b16）下拉到 GND；S（e14）→ GND", "馬達一腳 → 5V 軌（紅線），另一腳 → 第 13 行 = D（e13）；1N4007 並聯馬達：色環（陰極）d19 接 5V 側，陽極 d13 在 D 側", "可變電阻左腳（e22）→ 5V、右腳（e24）→ GND、中間腳（e23）→ A0"]
+}

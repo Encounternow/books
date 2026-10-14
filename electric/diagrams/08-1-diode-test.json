@@ -1,0 +1,18 @@
+{
+  "title": "實驗 8-1：二極體正接與反接——5V → 1N4007 → 220Ω → LED → GND",
+  "boards": ["uno"],
+  "parts": [
+    {"type": "diode", "label": "1N4007", "pins": ["c5", "c9"]},
+    {"type": "resistor", "value": "220Ω", "pins": ["d9", "d13"]},
+    {"type": "led", "color": "red", "pins": ["e13", "e16"]},
+    {"type": "meter", "id": "meter", "mode": "V", "display": "0.65"}
+  ],
+  "wires": [
+    ["uno:5V", "a5", "red"],
+    ["uno:GND", "T-3", "black"],
+    ["a16", "T-16", "black"],
+    ["meter:red", "b5", "red"],
+    ["meter:black", "b9", "black"]
+  ],
+  "notes": ["1N4007 白線端（陰極）朝右接 220Ω；反接實驗時把它轉 180 度", "LED 長腳（+）插 e13，短腳插 e16 → GND", "圖中電表量 V1（二極體兩端）；量 V2、V3 時把紅黑棒移到 220Ω 或 LED 兩端"]
+}

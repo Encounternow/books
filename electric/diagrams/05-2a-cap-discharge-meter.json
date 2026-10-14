@@ -1,0 +1,20 @@
+{
+  "title": "實驗 5-2：用三用電表看電容電壓慢慢掉（放電）",
+  "boards": [],
+  "parts": [
+    {"type": "battery9v", "id": "bat"},
+    {"type": "meter", "id": "meter", "mode": "V", "display": "9.00"},
+    {"type": "button", "pins": ["e8", "f8"]},
+    {"type": "capacitor", "value": "100µF", "polar": true, "pins": ["g8", "g11"]},
+    {"type": "resistor", "value": "10kΩ", "pins": ["i8", "i11"]}
+  ],
+  "wires": [
+    ["bat:+", "T+3", "red"],
+    ["T+8", "a8", "red"],
+    ["bat:-", "B-3", "black"],
+    ["j11", "B-11", "black"],
+    ["meter:red", "j8", "red"],
+    ["meter:black", "B-5", "black"]
+  ],
+  "notes": ["9V + → 按鈕 → 電容長腳（+，g8）；電容短腳（g11）→ GND 軌；10kΩ 跨在電容兩端（i8–i11）", "電表 DCV 20V 檔：紅棒夾電容 +（j8）、黑棒夾 GND 軌；放開按鈕的同時按下碼表，每秒讀一次", "換 470µF、1000µF 時注意長腳一樣在第 8 行"]
+}

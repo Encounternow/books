@@ -1,0 +1,38 @@
+{
+  "title": "實驗 6-1（第二階段）：用示波器量 9V 電池的直流",
+  "boards": [],
+  "parts": [
+    {
+      "type": "battery9v",
+      "id": "bat"
+    },
+    {
+      "type": "scope",
+      "id": "scope"
+    }
+  ],
+  "wires": [
+    [
+      "bat:+",
+      "B+3",
+      "red"
+    ],
+    [
+      "bat:-",
+      "B-3",
+      "black"
+    ]
+  ],
+  "probes": [
+    {
+      "ch": "CH1",
+      "tip": "B+8",
+      "gnd": "B-24"
+    }
+  ],
+  "notes": [
+    "電池扣紅線接 + 軌、黑線接 − 軌；探棒鉤子鉤 + 軌（紅線），接地夾夾 − 軌（黑線）",
+    "探棒撥 10×、CH1 Probe 也設 10×；DC 耦合、2V/div、1ms/div、觸發 Auto",
+    "第一階段的探棒補償直接接示波器面板的 Probe Comp，不用接線"
+  ]
+}

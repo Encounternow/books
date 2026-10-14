@@ -1,0 +1,24 @@
+{
+  "title": "實驗 11-2：用兩個按鈕模擬邏輯閘",
+  "boards": ["uno"],
+  "parts": [
+    {"type": "resistor", "value": "220Ω", "pins": ["c12", "c15"]},
+    {"type": "led", "color": "red", "pins": ["d15", "d18"]},
+    {"type": "button", "pins": ["e21", "f21"]},
+    {"type": "button", "pins": ["e26", "f26"]}
+  ],
+  "wires": [
+    ["uno:D9", "a12", "orange"],
+    ["uno:GND", "T-3", "black"],
+    ["a18", "T-18", "black"],
+    ["uno:D2", "a21", "yellow"],
+    ["uno:D3", "a26", "green"],
+    ["uno:GND2", "B-10", "black"],
+    ["j21", "B-21", "black"],
+    ["j26", "B-26", "black"]
+  ],
+  "notes": [
+    "D9 → 220Ω（c12→c15）→ LED 長腳（d15）；LED 短腳（d18）由 a18 接 GND 軌",
+    "按鈕 A 上腳接 D2、按鈕 B 上腳接 D3，下腳都接下方 GND 軌（內建上拉，按下是 LOW）"
+  ]
+}

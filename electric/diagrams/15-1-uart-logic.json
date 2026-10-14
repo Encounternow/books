@@ -1,0 +1,12 @@
+{
+  "title": "實驗 15-1：邏輯分析儀 CH0 鉤 Arduino D1（TX），錄下 \"Hello\"",
+  "boards": ["uno"],
+  "parts": [
+    {"type": "logic", "id": "logic"}
+  ],
+  "wires": [
+    ["logic:CH0", "uno:D1", "green"],
+    ["logic:GND", "uno:GND", "black"]
+  ],
+  "notes": ["CH0 → D1（印著 TX→ 的那隻腳），不是 D0", "邏輯分析儀 GND 一定要接 Arduino GND，不接會完全錄不到", "邏輯分析儀和 Arduino 的 USB 都要插到電腦"]
+}

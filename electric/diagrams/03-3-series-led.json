@@ -1,0 +1,62 @@
+{
+  "title": "實驗 3-3：串聯 LED——9V → 330Ω → 紅 → 綠 → 藍 → 9V 黑線",
+  "boards": [],
+  "parts": [
+    {
+      "type": "battery9v",
+      "id": "bat"
+    },
+    {
+      "type": "resistor",
+      "value": "330Ω",
+      "pins": [
+        "c5",
+        "c3"
+      ]
+    },
+    {
+      "type": "led",
+      "color": "red",
+      "label": "",
+      "pins": [
+        "d5",
+        "d6"
+      ]
+    },
+    {
+      "type": "led",
+      "color": "green",
+      "label": "",
+      "pins": [
+        "e6",
+        "e7"
+      ]
+    },
+    {
+      "type": "led",
+      "color": "blue",
+      "label": "",
+      "pins": [
+        "d7",
+        "d8"
+      ]
+    }
+  ],
+  "wires": [
+    [
+      "bat:+",
+      "a3",
+      "red"
+    ],
+    [
+      "bat:-",
+      "a8",
+      "black"
+    ]
+  ],
+  "notes": [
+    "9V 紅線 → a3；330Ω c3–c5；紅 LED 長腳 d5、短腳 d6；綠 LED 長腳 e6、短腳 e7；藍 LED 長腳 d7、短腳 d8；9V 黑線 → a8",
+    "每顆 LED 的長腳都朝電阻那一側（第 6、7 列同列相連，所以零件頭尾相接）",
+    "步驟 1 先不插藍 LED：用一條杜邦線把第 7 列和第 8 列接起來"
+  ]
+}

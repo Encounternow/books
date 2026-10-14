@@ -1,0 +1,21 @@
+{
+  "title": "實驗 8-3：半波整流——tone() 方波經 10µF 變交流，再過 1N4148",
+  "boards": ["uno"],
+  "parts": [
+    {"type": "capacitor", "value": "10µF", "polar": true, "pins": ["g4", "g7"]},
+    {"type": "resistor", "value": "10kΩ", "pins": ["i7", "B-7"]},
+    {"type": "diode", "label": "1N4148", "pins": ["h7", "h13"]},
+    {"type": "resistor", "value": "100kΩ", "pins": ["i13", "B-13"]},
+    {"type": "scope", "id": "scope"}
+  ],
+  "wires": [
+    ["uno:GND", "T-3", "black"],
+    ["T-1", "B-1", "black"],
+    ["uno:D9", "j4", "orange"]
+  ],
+  "probes": [
+    {"ch": "CH1", "tip": "f7", "gnd": "T-24"},
+    {"ch": "CH2", "tip": "g13", "gnd": "T-28"}
+  ],
+  "notes": ["D9 → 10µF 長腳（+，g4）；短腳（−）→ A 點（第 7 行）", "A 點 → 10kΩ → GND（下方藍軌，與上方藍軌用黑線相連）；A 點 → 1N4148（黑線朝右）→ B 點（第 13 行）→ 100kΩ → GND", "CH1 夾 A 點（f7）、CH2 夾 B 點（g13）；兩個接地夾都夾上方 GND 軌"]
+}

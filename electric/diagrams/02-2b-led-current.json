@@ -1,0 +1,58 @@
+{
+  "title": "實驗 2-2（B）：量電流——電阻一腳改插 c9，電表串在 e9 與 e5 之間",
+  "boards": [
+    "uno"
+  ],
+  "parts": [
+    {
+      "type": "resistor",
+      "value": "330Ω",
+      "pins": [
+        "c9",
+        "c3"
+      ]
+    },
+    {
+      "type": "led",
+      "color": "red",
+      "pins": [
+        "d5",
+        "d6"
+      ],
+      "label": ""
+    },
+    {
+      "type": "meter",
+      "id": "meter",
+      "mode": "A",
+      "display": "9.1 mA"
+    }
+  ],
+  "wires": [
+    [
+      "uno:5V",
+      "a3",
+      "red"
+    ],
+    [
+      "uno:GND",
+      "a6",
+      "black"
+    ],
+    [
+      "meter:red",
+      "e9",
+      "red"
+    ],
+    [
+      "meter:black",
+      "e5",
+      "black"
+    ]
+  ],
+  "notes": [
+    "電阻在 c5 的腳改插 c9，讓電路出現缺口；電表紅棒插 mA 孔、旋鈕轉 DCA 20m",
+    "紅棒插 e9（電阻那一側）、黑棒插 e5（LED 長腳那一側）",
+    "4.7kΩ、10kΩ 時改轉 2000µ 檔；量完紅棒插回 VΩmA、旋鈕轉回 DCV"
+  ]
+}

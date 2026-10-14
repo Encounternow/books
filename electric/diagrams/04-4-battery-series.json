@@ -1,0 +1,13 @@
+{
+  "title": "實驗 4-4：電池串起來，電壓加起來（電表直接量電池盒）",
+  "boards": [],
+  "parts": [
+    {"type": "aa4", "id": "aa4"},
+    {"type": "meter", "id": "meter", "mode": "V", "display": "6.00"}
+  ],
+  "wires": [
+    ["meter:red", "aa4:+", "red"],
+    ["meter:black", "aa4:-", "black"]
+  ],
+  "notes": ["不用麵包板：電表轉 DCV 20V 檔，紅棒碰電池盒紅線、黑棒碰黑線", "單顆 AA 一樣量：紅棒碰凸起那端（+）、黑棒碰平的那端（−）；9V 電池紅棒碰紅線、黑棒碰黑線"]
+}

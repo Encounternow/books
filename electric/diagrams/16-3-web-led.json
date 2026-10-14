@@ -1,0 +1,14 @@
+{
+  "title": "實驗 16-3：用手機網頁開關 LED（外接 LED 版）",
+  "boards": ["esp32"],
+  "parts": [
+    {"type": "resistor", "value": "220Ω", "pins": ["c5", "c8"]},
+    {"type": "led", "color": "red", "pins": ["d8", "d9"]}
+  ],
+  "wires": [
+    ["esp:2", "a5", "orange"],
+    ["esp:GND", "T-2", "black"],
+    ["a9", "T-9", "black"]
+  ],
+  "notes": ["GPIO 2 → 220Ω → LED 長腳（d8）；LED 短腳（d9）→ GND 軌", "GPIO 2 同時會點亮板上藍色 LED 和這顆外接 LED"]
+}

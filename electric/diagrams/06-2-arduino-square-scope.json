@@ -1,0 +1,15 @@
+{
+  "title": "實驗 6-2：量 Arduino 的方波——Vpp、頻率、週期",
+  "boards": ["uno"],
+  "parts": [
+    {"type": "scope", "id": "scope"}
+  ],
+  "wires": [
+    ["uno:D9", "a10", "orange"],
+    ["uno:GND", "T-3", "black"]
+  ],
+  "probes": [
+    {"ch": "CH1", "tip": "e10", "gnd": "T-22"}
+  ],
+  "notes": ["一條杜邦線插 D9，探棒鉤子鉤住那條線的另一端（e10 同一行）", "一條杜邦線插 GND 到 − 軌，接地夾夾在 − 軌上；接地夾只能夾 GND"]
+}

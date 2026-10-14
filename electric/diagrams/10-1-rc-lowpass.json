@@ -1,0 +1,79 @@
+{
+  "title": "實驗 10-1：用 RC 濾波把 PWM 磨成直流（10kΩ + 10µF）",
+  "boards": [
+    "uno"
+  ],
+  "parts": [
+    {
+      "type": "meter",
+      "id": "meter",
+      "mode": "V",
+      "display": "2.50"
+    },
+    {
+      "type": "scope",
+      "id": "scope"
+    },
+    {
+      "type": "resistor",
+      "value": "10kΩ",
+      "pins": [
+        "d12",
+        "d18"
+      ]
+    },
+    {
+      "type": "capacitor",
+      "value": "10µF",
+      "polar": true,
+      "pins": [
+        "b18",
+        "b22"
+      ]
+    }
+  ],
+  "wires": [
+    [
+      "uno:D9",
+      "a12",
+      "orange"
+    ],
+    [
+      "uno:GND",
+      "T-3",
+      "black"
+    ],
+    [
+      "meter:red",
+      "e18",
+      "red"
+    ],
+    [
+      "meter:black",
+      "T-7",
+      "black"
+    ],
+    [
+      "a22",
+      "T-25",
+      "black"
+    ]
+  ],
+  "probes": [
+    {
+      "ch": "CH1",
+      "tip": "c12",
+      "gnd": "T-27"
+    },
+    {
+      "ch": "CH2",
+      "tip": "a18",
+      "gnd": "T-30"
+    }
+  ],
+  "notes": [
+    "D9 → 10kΩ（d12→d18）；第 18 行就是「輸出點」",
+    "10µF 長腳（+）插 b18，短腳（−）插 b22，由 a22 接 GND 軌（藍線）",
+    "CH1 量 D9（c12）、CH2 量輸出點（a18），接地夾都夾 GND 軌；三用電表紅棒接輸出點（e18）、黑棒接 GND 軌"
+  ]
+}

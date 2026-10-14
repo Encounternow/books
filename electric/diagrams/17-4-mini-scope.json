@@ -1,0 +1,67 @@
+{
+  "title": "實驗 17-4：專題四 ESP32 迷你示波器（UNO 當訊號源）",
+  "boards": [
+    "uno",
+    "esp32"
+  ],
+  "parts": [
+    {
+      "type": "resistor",
+      "value": "10kΩ",
+      "pins": [
+        "b5",
+        "b8"
+      ]
+    },
+    {
+      "type": "resistor",
+      "value": "10kΩ",
+      "pins": [
+        "d4",
+        "d8"
+      ]
+    },
+    {
+      "type": "scope",
+      "id": "scope"
+    }
+  ],
+  "wires": [
+    [
+      "uno:D8",
+      "a5",
+      "orange"
+    ],
+    [
+      "uno:GND",
+      "T-10",
+      "black"
+    ],
+    [
+      "esp:GND",
+      "T-1",
+      "black"
+    ],
+    [
+      "a4",
+      "T-4",
+      "black"
+    ],
+    [
+      "a8",
+      "esp:34",
+      "green"
+    ]
+  ],
+  "probes": [
+    {
+      "ch": "CH1",
+      "tip": "d8",
+      "gnd": "T-16"
+    }
+  ],
+  "notes": [
+    "UNO D8 → 10kΩ → 分壓點（第 8 行）→ 10kΩ → GND；分壓點 → ESP32 GPIO 34（只有 0–2.5V）",
+    "UNO GND 與 ESP32 GND 都接上方藍軌（共地），示波器鱷魚夾也夾這條軌；CH1 探棒鉤分壓點（d8）比對"
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "title": "實驗 1-1：量電池電壓——三用電表直接碰電池扣的紅、黑線",
+  "boards": [],
+  "parts": [
+    {
+      "type": "meter",
+      "id": "meter",
+      "mode": "V",
+      "display": "9.45"
+    },
+    {
+      "type": "battery9v",
+      "id": "bat"
+    },
+    {
+      "type": "aa4",
+      "id": "aa2",
+      "cells": 2
+    }
+  ],
+  "wires": [
+    [
+      "bat:+",
+      "meter:red",
+      "red"
+    ],
+    [
+      "bat:-",
+      "meter:black",
+      "black"
+    ]
+  ],
+  "notes": [
+    "不用麵包板：黑棒插 COM、紅棒插 V 孔，旋鈕轉 DCV 20V，紅棒碰＋、黑棒碰－",
+    "量 3 號電池盒時一樣：紅棒碰紅線（＋）、黑棒碰黑線（－）；紅黑對調只會多一個負號"
+  ]
+}

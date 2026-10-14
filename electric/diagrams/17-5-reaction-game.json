@@ -1,0 +1,174 @@
+{
+  "title": "實驗 17-5：專題五 反應遊戲與電子琴（UNO）",
+  "boards": [
+    "uno"
+  ],
+  "parts": [
+    {
+      "type": "button",
+      "pins": [
+        "e2",
+        "f2"
+      ]
+    },
+    {
+      "type": "button",
+      "pins": [
+        "e7",
+        "f7"
+      ]
+    },
+    {
+      "type": "button",
+      "pins": [
+        "e12",
+        "f12"
+      ]
+    },
+    {
+      "type": "resistor",
+      "value": "220Ω",
+      "pins": [
+        "c17",
+        "c19"
+      ]
+    },
+    {
+      "type": "led",
+      "color": "red",
+      "label": "紅 LED",
+      "pins": [
+        "d19",
+        "d20"
+      ]
+    },
+    {
+      "type": "resistor",
+      "value": "220Ω",
+      "pins": [
+        "c22",
+        "c24"
+      ]
+    },
+    {
+      "type": "led",
+      "color": "green",
+      "label": "綠 LED",
+      "pins": [
+        "d24",
+        "d25"
+      ]
+    },
+    {
+      "type": "resistor",
+      "value": "220Ω",
+      "pins": [
+        "c27",
+        "c29"
+      ]
+    },
+    {
+      "type": "led",
+      "color": "blue",
+      "label": "藍 LED",
+      "pins": [
+        "d29",
+        "d30"
+      ]
+    },
+    {
+      "type": "buzzer",
+      "pins": [
+        "h20",
+        "h23"
+      ]
+    }
+  ],
+  "wires": [
+    [
+      "uno:GND",
+      "T-1",
+      "black"
+    ],
+    [
+      "T-1",
+      "B-1",
+      "black"
+    ],
+    [
+      "uno:D2",
+      "a2",
+      "orange"
+    ],
+    [
+      "uno:D3",
+      "a7",
+      "orange"
+    ],
+    [
+      "uno:D4",
+      "a12",
+      "orange"
+    ],
+    [
+      "a4",
+      "T-4",
+      "black"
+    ],
+    [
+      "a9",
+      "T-9",
+      "black"
+    ],
+    [
+      "a14",
+      "T-14",
+      "black"
+    ],
+    [
+      "uno:D9",
+      "a17",
+      "red"
+    ],
+    [
+      "uno:D10",
+      "a22",
+      "green"
+    ],
+    [
+      "uno:D11",
+      "a27",
+      "blue"
+    ],
+    [
+      "a20",
+      "T-20",
+      "black"
+    ],
+    [
+      "a25",
+      "T-25",
+      "black"
+    ],
+    [
+      "a30",
+      "T-30",
+      "black"
+    ],
+    [
+      "uno:D8",
+      "j20",
+      "purple"
+    ],
+    [
+      "j23",
+      "B-23",
+      "black"
+    ]
+  ],
+  "notes": [
+    "按鈕 1/2/3（由左到右）一腳接 D2/D3/D4，另一腳接 GND 軌（程式用 INPUT_PULLUP）",
+    "D9 → 220Ω → 紅 LED、D10 → 綠、D11 → 藍；LED 長腳接電阻、短腳接 GND 軌",
+    "蜂鳴器 +（h20）→ D8、−（h23）→ 下方 GND 軌；上下兩條藍軌用黑線接在一起"
+  ]
+}

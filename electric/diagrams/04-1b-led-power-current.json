@@ -1,0 +1,58 @@
+{
+  "title": "實驗 4-1：量 LED 與電阻各吃了多少功率（電表串聯量電流）",
+  "boards": [],
+  "parts": [
+    {
+      "type": "aa4",
+      "id": "aa4"
+    },
+    {
+      "type": "meter",
+      "id": "meter",
+      "mode": "A",
+      "display": "18.6mA"
+    },
+    {
+      "type": "resistor",
+      "value": "220Ω",
+      "pins": [
+        "h5",
+        "h9"
+      ]
+    },
+    {
+      "type": "led",
+      "color": "red",
+      "pins": [
+        "i9",
+        "i12"
+      ]
+    }
+  ],
+  "wires": [
+    [
+      "aa4:+",
+      "j5",
+      "red"
+    ],
+    [
+      "aa4:-",
+      "B-3",
+      "black"
+    ],
+    [
+      "meter:red",
+      "j12",
+      "red"
+    ],
+    [
+      "meter:black",
+      "B-16",
+      "black"
+    ]
+  ],
+  "notes": [
+    "拔掉 LED 短腳到 GND 的線，改成 LED 短腳（j12）→ 電表紅棒，電表黑棒 → GND 軌，讓電流流過電表",
+    "電表轉直流電流 mA 檔，紅棒要插在 mA 孔；量完記得插回 V/Ω 孔"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "title": "實驗 7-1：自製電磁鐵——電池盒 + 按鈕 + 鐵釘線圈（電表串聯量電流）",
+  "boards": [],
+  "parts": [
+    {"type": "meter", "id": "meter", "mode": "A", "display": "1.50"},
+    {"type": "aa4", "id": "aa4", "cells": 2},
+    {"type": "coil", "id": "coil", "label": "鐵釘 + 漆包線（50~100 匝）"},
+    {"type": "button", "pins": ["e10", "f10"]}
+  ],
+  "wires": [
+    ["aa4:+", "meter:red", "red"],
+    ["meter:black", "a10", "red"],
+    ["j12", "coil:1", "orange"],
+    ["coil:2", "aa4:-", "black"]
+  ],
+  "notes": ["電池盒紅線 → 電表（10A 直流電流檔）→ 按鈕一腳（第 10 行）；按下時接通到第 12 行 → 線圈", "線圈兩端要先用砂紙刮掉漆；一次按不超過 5 秒", "還沒做步驟 7 時，可以把電表拿掉，紅線直接插 a10"]
+}

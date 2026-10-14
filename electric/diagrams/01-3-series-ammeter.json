@@ -1,0 +1,60 @@
+{
+  "title": "實驗 1-3：把電表串進電路量電流（1kΩ 一腳改插 c12，電表補上缺口）",
+  "boards": [],
+  "parts": [
+    {
+      "type": "battery9v",
+      "id": "bat"
+    },
+    {
+      "type": "meter",
+      "id": "meter",
+      "mode": "A",
+      "display": "7.0 mA"
+    },
+    {
+      "type": "resistor",
+      "value": "1kΩ",
+      "pins": [
+        "c12",
+        "c5"
+      ]
+    },
+    {
+      "type": "led",
+      "color": "red",
+      "pins": [
+        "d8",
+        "d9"
+      ],
+      "label": ""
+    }
+  ],
+  "wires": [
+    [
+      "bat:+",
+      "a5",
+      "red"
+    ],
+    [
+      "bat:-",
+      "a9",
+      "black"
+    ],
+    [
+      "meter:red",
+      "e12",
+      "red"
+    ],
+    [
+      "meter:black",
+      "e8",
+      "black"
+    ]
+  ],
+  "notes": [
+    "電阻原本在 c8 的腳改插 c12，第 12 列和第 8 列之間就是缺口",
+    "電表紅棒插 mA 孔、旋鈕轉 DCA 20m：紅棒插 e12（靠電源＋）、黑棒插 e8（靠 LED 長腳）",
+    "量完把紅棒插回 V 孔、旋鈕轉回 DCV"
+  ]
+}

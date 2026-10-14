@@ -1,0 +1,23 @@
+{
+  "title": "實驗 9-1（第一階段）：按鈕 → 10kΩ → 2N2222 基極，用小電流點亮 LED",
+  "boards": ["uno"],
+  "parts": [
+    {"type": "button", "pins": ["e12", "f12"]},
+    {"type": "resistor", "value": "10kΩ", "pins": ["h14", "h18"]},
+    {"type": "transistor", "label": "2N2222", "pins": ["f17", "f18", "f19"]},
+    {"type": "led", "color": "red", "pins": ["i22", "i19"]},
+    {"type": "resistor", "value": "220Ω", "pins": ["g22", "g26"]},
+    {"type": "meter", "id": "meter", "mode": "V", "display": "0.70"}
+  ],
+  "wires": [
+    ["uno:5V", "T+3", "red"],
+    ["uno:GND", "T-3", "black"],
+    ["uno:GND2", "B-5", "black"],
+    ["T+12", "a12", "red"],
+    ["j17", "B-17", "black"],
+    ["j26", "T+26", "red"],
+    ["meter:red", "i18", "red"],
+    ["meter:black", "B-9", "black"]
+  ],
+  "notes": ["5V → 按鈕（第 12 行）→ 按下接通到第 14 行 → 10kΩ → B（f18）；E（f17）→ GND", "5V → 220Ω → LED 長腳（+，i22）；LED 短腳（i19）→ C（f19）", "電表紅棒接 B 那一行（i18）、黑棒接 GND 量 V_BE；步驟 3 把 10kΩ 換成 100kΩ"]
+}

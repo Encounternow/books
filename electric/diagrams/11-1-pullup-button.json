@@ -1,0 +1,16 @@
+{
+  "title": "實驗 11-1：內建上拉 + 按鈕（階段二）",
+  "boards": ["uno"],
+  "parts": [
+    {"type": "button", "pins": ["e20", "f20"]}
+  ],
+  "wires": [
+    ["uno:D2", "a20", "yellow"],
+    ["uno:GND2", "B-10", "black"],
+    ["j20", "B-20", "black"]
+  ],
+  "notes": [
+    "按鈕一腳（e20 那一行）接 D2，另一腳（f20 那一行）接 GND 軌",
+    "不用外接電阻：程式 pinMode(2, INPUT_PULLUP) 打開內建上拉，按下讀到 LOW"
+  ]
+}

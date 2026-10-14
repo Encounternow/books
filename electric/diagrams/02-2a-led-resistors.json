@@ -1,0 +1,42 @@
+{
+  "title": "實驗 2-2（A）：Arduino 5V → 電阻 R → 紅光 LED → GND，換五種電阻看亮度",
+  "boards": [
+    "uno"
+  ],
+  "parts": [
+    {
+      "type": "resistor",
+      "value": "330Ω",
+      "pins": [
+        "c5",
+        "c3"
+      ]
+    },
+    {
+      "type": "led",
+      "color": "red",
+      "pins": [
+        "d5",
+        "d6"
+      ],
+      "label": "紅光 LED"
+    }
+  ],
+  "wires": [
+    [
+      "uno:5V",
+      "a3",
+      "red"
+    ],
+    [
+      "uno:GND",
+      "a6",
+      "black"
+    ]
+  ],
+  "notes": [
+    "Arduino 5V → a3；電阻 R 一腳 c3、另一腳 c5；LED 長腳 d5、短腳 d6；Arduino GND → a6",
+    "5V 線和 GND 線絕對不能插在同一列（短路）",
+    "R 依序換 220Ω、330Ω、1kΩ、4.7kΩ、10kΩ；量 LED 電壓時紅棒 d5、黑棒 d6"
+  ]
+}

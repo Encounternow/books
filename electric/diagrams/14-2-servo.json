@@ -1,0 +1,13 @@
+{
+  "title": "實驗 14-2：SG90 伺服馬達——橘線 D9、紅線 5V、棕線 GND",
+  "boards": ["uno"],
+  "parts": [
+    {"type": "servo", "id": "servo"}
+  ],
+  "wires": [
+    ["servo:sig", "uno:D9", "orange"],
+    ["servo:vcc", "uno:5V", "red"],
+    ["servo:gnd", "uno:GND", "black"]
+  ],
+  "notes": ["SG90 接頭是母頭，用公公杜邦線一端插接頭、另一端直接插 Arduino，不經過麵包板", "橘＝訊號 → D9；紅＝5V；棕＝GND"]
+}

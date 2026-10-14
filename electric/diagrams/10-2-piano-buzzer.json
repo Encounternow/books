@@ -1,0 +1,104 @@
+{
+  "title": "實驗 10-2：三鍵電子琴，用示波器驗證音高",
+  "boards": [
+    "uno"
+  ],
+  "parts": [
+    {
+      "type": "buzzer",
+      "pins": [
+        "c24",
+        "c27"
+      ]
+    },
+    {
+      "type": "button",
+      "pins": [
+        "e11",
+        "f11"
+      ]
+    },
+    {
+      "type": "button",
+      "pins": [
+        "e15",
+        "f15"
+      ]
+    },
+    {
+      "type": "button",
+      "pins": [
+        "e19",
+        "f19"
+      ]
+    },
+    {
+      "type": "scope",
+      "id": "scope"
+    }
+  ],
+  "wires": [
+    [
+      "uno:D8",
+      "b24",
+      "orange"
+    ],
+    [
+      "uno:GND",
+      "T-3",
+      "black"
+    ],
+    [
+      "a27",
+      "T-30",
+      "black"
+    ],
+    [
+      "uno:D2",
+      "a11",
+      "yellow"
+    ],
+    [
+      "uno:D3",
+      "a15",
+      "green"
+    ],
+    [
+      "uno:D4",
+      "a19",
+      "blue"
+    ],
+    [
+      "uno:GND2",
+      "B-8",
+      "black"
+    ],
+    [
+      "j11",
+      "B-11",
+      "black"
+    ],
+    [
+      "j15",
+      "B-15",
+      "black"
+    ],
+    [
+      "j19",
+      "B-19",
+      "black"
+    ]
+  ],
+  "probes": [
+    {
+      "ch": "CH1",
+      "tip": "a24",
+      "gnd": "T-23"
+    }
+  ],
+  "notes": [
+    "蜂鳴器「+」腳插 c24 接 D8，「−」腳插 c27 接 GND 軌",
+    "按鈕 1、2、3（左到右）上腳分別接 D2、D3、D4，下腳接下方 GND 軌（由 Arduino 另一個 GND 腳供應）",
+    "CH1 探棒量 D8 那一行（a24），接地夾夾 GND 軌"
+  ]
+}

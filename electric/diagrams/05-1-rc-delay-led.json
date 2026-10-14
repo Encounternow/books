@@ -1,0 +1,82 @@
+{
+  "title": "實驗 5-1：延遲關燈電路——用 LED 看電容放電",
+  "boards": [],
+  "parts": [
+    {
+      "type": "battery9v",
+      "id": "bat"
+    },
+    {
+      "type": "button",
+      "pins": [
+        "e8",
+        "f8"
+      ]
+    },
+    {
+      "type": "resistor",
+      "value": "220Ω",
+      "pins": [
+        "a8",
+        "a12"
+      ]
+    },
+    {
+      "type": "capacitor",
+      "value": "1000µF",
+      "polar": true,
+      "pins": [
+        "c12",
+        "c15"
+      ]
+    },
+    {
+      "type": "resistor",
+      "value": "1kΩ",
+      "pins": [
+        "e12",
+        "e16"
+      ]
+    },
+    {
+      "type": "led",
+      "color": "red",
+      "pins": [
+        "b16",
+        "b18"
+      ]
+    }
+  ],
+  "wires": [
+    [
+      "bat:+",
+      "B+2",
+      "red"
+    ],
+    [
+      "B+8",
+      "j8",
+      "red"
+    ],
+    [
+      "bat:-",
+      "T-3",
+      "black"
+    ],
+    [
+      "a15",
+      "T-15",
+      "black"
+    ],
+    [
+      "a18",
+      "T-18",
+      "black"
+    ]
+  ],
+  "notes": [
+    "按鈕跨在中央溝：下腳（f8）接 9V +，上腳（e8）→ 220Ω → 節點 A（上半第 12 行）",
+    "1000µF 長腳（+）插 c12 接節點 A，短腳（白帶）插 c15 接 GND 軌；1kΩ 從節點 A 接到 LED 長腳（b16），LED 短腳（b18）接 GND 軌",
+    "放電電阻 1kΩ 做完後輪流換成 4.7kΩ、10kΩ"
+  ]
+}

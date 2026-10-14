@@ -1,0 +1,20 @@
+{
+  "title": "實驗 13-2：光敏電阻分壓接 A0，D9 驅動白光 LED 自動夜燈",
+  "boards": ["uno"],
+  "parts": [
+    {"type": "ldr", "pins": ["c3", "c6"]},
+    {"type": "resistor", "value": "10kΩ", "pins": ["e6", "e10"]},
+    {"type": "resistor", "value": "220Ω", "pins": ["c15", "c19"]},
+    {"type": "led", "color": "white", "pins": ["d19", "d22"]}
+  ],
+  "wires": [
+    ["uno:5V", "T+1", "red"],
+    ["uno:GND", "T-1", "black"],
+    ["a3", "T+3", "red"],
+    ["a10", "T-10", "black"],
+    ["uno:A0", "b6", "green"],
+    ["a15", "uno:D9", "orange"],
+    ["a22", "T-22", "black"]
+  ],
+  "notes": ["5V → LDR（c3–c6）→ 第 6 行是「分壓點」→ 10kΩ（e6–e10）→ GND；分壓點接 A0", "D9 → 220Ω（c15–c19）→ LED 長腳（d19），LED 短腳（d22）→ GND"]
+}

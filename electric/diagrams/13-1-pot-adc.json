@@ -1,0 +1,18 @@
+{
+  "title": "實驗 13-1：轉旋鈕，看數字和電壓——可變電阻接 A0，三用電表量 A0",
+  "boards": ["uno"],
+  "parts": [
+    {"type": "pot", "pins": ["e12", "e13", "e14"]},
+    {"type": "meter", "id": "meter", "mode": "V", "display": "2.50"}
+  ],
+  "wires": [
+    ["uno:5V", "T+1", "red"],
+    ["uno:GND", "T-1", "black"],
+    ["a12", "T+12", "red"],
+    ["a14", "T-14", "black"],
+    ["uno:A0", "b13", "green"],
+    ["c13", "meter:red", "red"],
+    ["T-3", "meter:black", "black"]
+  ],
+  "notes": ["可變電阻左腳（e12）→ 5V、右腳（e14）→ GND、中間腳（e13）→ A0", "三用電表切直流電壓檔 20V：紅棒碰 A0 那一行（c13）、黑棒碰 GND 軌"]
+}

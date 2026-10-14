@@ -1,0 +1,22 @@
+{
+  "title": "實驗 9-1（第二階段）：兩顆 2N2222 達靈頓，手指觸控開關",
+  "boards": ["uno"],
+  "parts": [
+    {"type": "transistor", "label": "Q1 2N2222", "pins": ["f13", "f14", "f15"]},
+    {"type": "transistor", "label": "Q2 2N2222", "pins": ["f18", "f19", "f20"]},
+    {"type": "jumper", "pins": ["h13", "h19"], "color": "green"},
+    {"type": "jumper", "pins": ["g15", "g20"], "color": "blue"},
+    {"type": "led", "color": "red", "pins": ["i24", "i20"]},
+    {"type": "resistor", "value": "220Ω", "pins": ["g24", "g28"]}
+  ],
+  "wires": [
+    ["uno:5V", "T+3", "red"],
+    ["uno:GND", "T-3", "black"],
+    ["uno:GND2", "B-5", "black"],
+    ["j18", "B-18", "black"],
+    ["j28", "T+28", "red"],
+    ["j14", "j2", "yellow"],
+    ["T+4", "j4", "red"]
+  ],
+  "notes": ["Q1 的 E（f13）→ 綠跳線 → Q2 的 B（f19）；Q1 的 C（f15）與 Q2 的 C（f20）用藍跳線接在一起 → LED 短腳（i20）", "Q2 的 E（f18）→ GND；5V → 220Ω → LED 長腳（+，i24）", "黃線（接 Q1 的 B）和紅線（接 5V）另一端其實露出來不插板：圖中的 j2、j4 只是示意，請用手指捏住兩根線頭"]
+}

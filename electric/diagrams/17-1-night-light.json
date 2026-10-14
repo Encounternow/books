@@ -1,0 +1,81 @@
+{
+  "title": "實驗 17-1：專題一 智慧夜燈（UNO）",
+  "boards": [
+    "uno"
+  ],
+  "parts": [
+    {
+      "type": "ldr",
+      "pins": [
+        "c2",
+        "c6"
+      ]
+    },
+    {
+      "type": "resistor",
+      "value": "10kΩ",
+      "pins": [
+        "e6",
+        "e10"
+      ]
+    },
+    {
+      "type": "resistor",
+      "value": "220Ω",
+      "pins": [
+        "c16",
+        "c20"
+      ]
+    },
+    {
+      "type": "led",
+      "color": "white",
+      "label": "白色 LED",
+      "pins": [
+        "d20",
+        "d21"
+      ]
+    }
+  ],
+  "wires": [
+    [
+      "uno:5V",
+      "T+2",
+      "red"
+    ],
+    [
+      "uno:GND",
+      "T-2",
+      "black"
+    ],
+    [
+      "T+3",
+      "a2",
+      "red"
+    ],
+    [
+      "a6",
+      "uno:A0",
+      "green"
+    ],
+    [
+      "a10",
+      "T-10",
+      "black"
+    ],
+    [
+      "uno:D9",
+      "a16",
+      "orange"
+    ],
+    [
+      "a21",
+      "T-21",
+      "black"
+    ]
+  ],
+  "notes": [
+    "5V → 光敏電阻 → 第 6 行（分壓點）→ A0；分壓點 → 10kΩ → GND",
+    "D9 → 220Ω → LED 長腳（d20）；LED 短腳（d21）→ GND"
+  ]
+}

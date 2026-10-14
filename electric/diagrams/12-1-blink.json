@@ -1,0 +1,17 @@
+{
+  "title": "實驗 12-1：Blink，第一支程式",
+  "boards": ["uno"],
+  "parts": [
+    {"type": "resistor", "value": "220Ω", "pins": ["c12", "c15"]},
+    {"type": "led", "color": "red", "pins": ["d15", "d18"]}
+  ],
+  "wires": [
+    ["uno:D9", "a12", "orange"],
+    ["uno:GND", "T-3", "black"],
+    ["a18", "T-18", "black"]
+  ],
+  "notes": [
+    "D9 → 220Ω（c12→c15）→ LED 長腳（+，d15）",
+    "LED 短腳（−，d18）由 a18 接 GND 軌（藍線），GND 軌再接 Arduino GND"
+  ]
+}

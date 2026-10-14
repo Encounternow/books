@@ -1,0 +1,62 @@
+{
+  "title": "實驗 5-3：用示波器看充放電曲線（Arduino 方波經過 RC）",
+  "boards": [
+    "uno"
+  ],
+  "parts": [
+    {
+      "type": "resistor",
+      "value": "10kΩ",
+      "pins": [
+        "a15",
+        "a21"
+      ]
+    },
+    {
+      "type": "ceramic",
+      "value": "100nF",
+      "pins": [
+        "d21",
+        "d25"
+      ]
+    },
+    {
+      "type": "scope",
+      "id": "scope"
+    }
+  ],
+  "wires": [
+    [
+      "uno:D9",
+      "b15",
+      "orange"
+    ],
+    [
+      "uno:GND",
+      "T-3",
+      "black"
+    ],
+    [
+      "a25",
+      "T-25",
+      "black"
+    ]
+  ],
+  "probes": [
+    {
+      "ch": "CH1",
+      "tip": "e15",
+      "gnd": "T-27"
+    },
+    {
+      "ch": "CH2",
+      "tip": "e21",
+      "gnd": "T-30"
+    }
+  ],
+  "notes": [
+    "D9 → 10kΩ（第 15 行 → 第 21 行）→ 節點 B（第 21 行）→ 100nF → GND 軌",
+    "CH1 探棒鉤 D9 那一行（e15），CH2 探棒鉤節點 B（e21）；兩支探棒的接地夾都夾 GND 軌",
+    "步驟 6 換成 100µF 電解電容時，長腳（+）要插在節點 B 那一行"
+  ]
+}

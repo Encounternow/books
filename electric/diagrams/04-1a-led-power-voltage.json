@@ -1,0 +1,18 @@
+{
+  "title": "實驗 4-1：量 LED 與電阻各吃了多少功率（量 LED 兩端電壓）",
+  "boards": [],
+  "parts": [
+    {"type": "aa4", "id": "aa4"},
+    {"type": "meter", "id": "meter", "mode": "V", "display": "1.90"},
+    {"type": "resistor", "value": "220Ω", "pins": ["h5", "h9"]},
+    {"type": "led", "color": "red", "pins": ["i9", "i12"]}
+  ],
+  "wires": [
+    ["aa4:+", "j5", "red"],
+    ["aa4:-", "B-3", "black"],
+    ["j12", "B-12", "black"],
+    ["meter:red", "j9", "red"],
+    ["meter:black", "B-16", "black"]
+  ],
+  "notes": ["電池盒紅線 → 220Ω → LED 長腳（+，i9）；LED 短腳（i12）→ GND 軌 → 電池盒黑線", "電表轉 DCV 20V 檔：紅棒碰 LED 長腳那一行（j9）、黑棒碰 GND；量 220Ω 兩端時把紅棒移到 j5", "先不接電路、只用電表量電池盒電壓，記下 V電池"]
+}

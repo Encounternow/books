@@ -1,0 +1,17 @@
+{
+  "title": "實驗 8-2：LED 順向電壓大賽——5V → 220Ω → LED → GND",
+  "boards": ["uno"],
+  "parts": [
+    {"type": "resistor", "value": "220Ω", "pins": ["c5", "c9"]},
+    {"type": "led", "color": "red", "label": "LED（換顏色）", "pins": ["e9", "e12"]},
+    {"type": "meter", "id": "meter", "mode": "V", "display": "1.90"}
+  ],
+  "wires": [
+    ["uno:5V", "a5", "red"],
+    ["uno:GND", "T-3", "black"],
+    ["a12", "T-12", "black"],
+    ["meter:red", "b9", "red"],
+    ["meter:black", "b12", "black"]
+  ],
+  "notes": ["LED 長腳（+）插 e9，短腳插 e12；換顏色時拔掉 USB 再換", "電表量 V_LED：紅棒接長腳那一行（b9）、黑棒接短腳那一行（b12）；量 V_R 時跨在 220Ω 兩端"]
+}

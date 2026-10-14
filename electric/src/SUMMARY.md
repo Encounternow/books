@@ -39,3 +39,4 @@
 - [附錄 D　示波器與邏輯分析儀操作速查](appendix-D.md)
 - [附錄 E　故障排除總表](appendix-E.md)
 - [附錄 F　中英名詞對照表](appendix-F.md)
+- [附錄 G　電路符號對照表](appendix-G.md)
