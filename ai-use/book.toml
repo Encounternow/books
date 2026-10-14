@@ -1,0 +1,19 @@
+[book]
+title = "AI 怎麼用：國中生與家長的 AI 應用課"
+authors = ["Vic Huang"]
+language = "zh-TW"
+src = "src"
+
+[build]
+build-dir = "book"
+
+[output.html]
+additional-css = ["theme/custom.css"]
+default-theme = "light"
+preferred-dark-theme = "navy"
+no-section-label = true
+site-url = "/ai-use/"
+
+[output.html.fold]
+enable = true
+level = 1
