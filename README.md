@@ -11,6 +11,7 @@
 | `economics/` | 生活經濟學：從零用錢看懂世界怎麼運作 | https://book.vichuang.tw/economics/ |
 | `accounting/` | 看懂錢的流向：零基礎會計入門 | https://book.vichuang.tw/accounting/ |
 | `math/` | 數學這樣想：從國小到國中的數學思考課 | https://book.vichuang.tw/math/ |
+| `math2/` | 數學這樣想（進階）：從函數、三角到微積分 | https://book.vichuang.tw/math2/ |
 | `english/` | 英文自學地圖：國中生的英文學習法與練習本 | https://book.vichuang.tw/english/ |
 
 ## 本機預覽
