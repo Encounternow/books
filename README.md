@@ -7,6 +7,7 @@
 | `electric/` | 動手玩電：給國中生的電學、電子學與電路學實作課 | https://book.vichuang.tw/electric/ |
 | `physics/` | 動手玩物理：家裡就能做的國中物理實驗課 | https://book.vichuang.tw/physics/ |
 | `chemistry/` | 廚房裡的化學：安全又好玩的國中化學實驗課 | https://book.vichuang.tw/chemistry/ |
+| `mech/` | 動手玩機械與 3D 列印：從齒輪到自己設計零件 | https://book.vichuang.tw/mech/ |
 | `statistics/` | 從資料看世界：零基礎統計學 | https://book.vichuang.tw/statistics/ |
 | `economics/` | 生活經濟學：從零用錢看懂世界怎麼運作 | https://book.vichuang.tw/economics/ |
 | `accounting/` | 看懂錢的流向：零基礎會計入門 | https://book.vichuang.tw/accounting/ |
